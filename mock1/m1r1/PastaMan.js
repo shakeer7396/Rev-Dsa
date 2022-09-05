@@ -53,3 +53,35 @@
 // In the first test case he can eat the 3-rd noodle on the 1-st day and the 1-st noodle on the 2-nd day, so his meal plan is feasible.
 
 // In the second test case a noodle of length exactly 1 is needed which is not available hence he gets ANGRY.
+
+
+function runProgram(input){
+    input=input.trim().split("\n")
+    
+}
+if (process.env.USERNAME === "shake") {
+  runProgram(`2
+  3 2
+  1 1 3
+  3 1
+  1 1
+  10
+  1`);
+} else {
+  process.stdin.resume();
+  process.stdin.setEncoding("ascii");
+  let read = "";
+  process.stdin.on("data", function (input) {
+    read += input;
+  });
+  process.stdin.on("end", function () {
+    read = read.replace(/\n$/, "");
+    read = read.replace(/\n$/, "");
+    runProgram(read);
+  });
+  process.on("SIGINT", function () {
+    read = read.replace(/\n$/, "");
+    runProgram(read);
+    process.exit(0);
+  });
+}
