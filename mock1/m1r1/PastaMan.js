@@ -56,7 +56,7 @@
 
 
 function runProgram(input){
-    input=input.trim().split("\n")
+    console.log(input);
     
 }
 if (process.env.USERNAME === "shake") {
